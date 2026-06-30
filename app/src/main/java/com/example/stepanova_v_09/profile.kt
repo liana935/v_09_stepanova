@@ -26,7 +26,7 @@ class Profile : AppCompatActivity() {
 
         // Переход на настройки
         ivSettings.setOnClickListener {
-            //val intent = Intent(this, SettingsManager::class.java)
+            val intent = Intent(this, SettingsManager::class.java)
             startActivity(intent)
         }
 
