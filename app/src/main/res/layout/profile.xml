@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ШАПКА -->
+
+        <!-- КУПОН 1 - Фото -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="26dp">
+
+            <!-- Аватарка слева -->
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ava" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- Приветствие по центру -->
+            <TextView
+                android:id="@+id/tvGreeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Привет !"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- Иконка настроек справа -->
+            <ImageView
+                android:id="@+id/ivSettings"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_settings" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/kupon"
+            android:scaleType="centerCrop" />
+
+        <!-- Текст под купоном 1 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Купономания! Выбери любимую сеть магазинов"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="30dp" />
+
+        <!-- КУПОН 2 - Фото -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="16dp"
+            android:src="@drawable/promo"
+            android:scaleType="centerCrop" />
+
+        <!-- Текст под купоном 2 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Все промокоды в одном приложении"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="24dp" />
+
+        <!-- ПОДВАЛ С КНОПКАМИ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="25dp"
+            android:background="@color/white">
+
+            <!-- Кнопка Выйти -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Выйти"
+                android:textColor="@color/white"
+                android:background="@drawable/button_primary"
+                android:drawableLeft="@drawable/ic_logout"
+                android:padding="12dp"
+                android:textSize="12sp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Кнопка Онлайн (нерабочая) -->
+            <Button
+                android:id="@+id/btnOnline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Онлайн"
+                android:textColor="@color/white"
+                android:background="@drawable/button_primary"
+                android:drawableLeft="@drawable/ic_online"
+                android:padding="12dp"
+                android:textSize="12sp"
+                android:layout_marginEnd="8dp"
+                android:enabled="false" />
+
+            <!-- Кнопка Снимок (рабочая) -->
+            <Button
+                android:id="@+id/btnSnapshot"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_primary"
+                android:drawableLeft="@drawable/ic_camera"
+                android:padding="12dp"
+                android:text="Снимок"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
